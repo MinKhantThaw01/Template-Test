@@ -1,0 +1,319 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+html[data-theme="light"] {
+  --dm-bg-dark: var(--bs-white);
+  --dm-color: var(--pdf-indigo-600);
+  --dm-text-color: var(--pdf-zinc-900);
+}
+
+html[data-theme="dark"] {
+  --dm-bg-dark: var(--pdf-zinc-900);
+  --dm-text-color: var(--pdf-slate-200);
+  --dm-color: var(--pdf-teal-400);
+}
+
+/* loading */
+.loading {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--dm-bg-dark);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  transition-duration: 1s;
+}
+
+.sk-folding-cube {
+  margin: 20px auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  -webkit-transform: rotateZ(45deg);
+  transform: rotateZ(45deg);
+}
+
+.sk-folding-cube .sk-cube {
+  float: left;
+  width: 50%;
+  height: 50%;
+  position: relative;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.sk-folding-cube .sk-cube:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--dm-text-color);
+  -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+  animation: sk-foldCubeAngle 2.4s infinite linear both;
+  -webkit-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+}
+.sk-folding-cube .sk-cube2 {
+  -webkit-transform: scale(1.1) rotateZ(90deg);
+  transform: scale(1.1) rotateZ(90deg);
+}
+.sk-folding-cube .sk-cube3 {
+  -webkit-transform: scale(1.1) rotateZ(180deg);
+  transform: scale(1.1) rotateZ(180deg);
+}
+.sk-folding-cube .sk-cube4 {
+  -webkit-transform: scale(1.1) rotateZ(270deg);
+  transform: scale(1.1) rotateZ(270deg);
+}
+.sk-folding-cube .sk-cube2:before {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+.sk-folding-cube .sk-cube3:before {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+.sk-folding-cube .sk-cube4:before {
+  -webkit-animation-delay: 0.9s;
+  animation-delay: 0.9s;
+}
+@-webkit-keyframes sk-foldCubeAngle {
+  0%,
+  10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+    transform: perspective(140px) rotateX(-180deg);
+    opacity: 0;
+  }
+  25%,
+  75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+    transform: perspective(140px) rotateX(0deg);
+    opacity: 1;
+  }
+  90%,
+  100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+    transform: perspective(140px) rotateY(180deg);
+    opacity: 0;
+  }
+}
+
+@keyframes sk-foldCubeAngle {
+  0%,
+  10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+    transform: perspective(140px) rotateX(-180deg);
+    opacity: 0;
+  }
+  25%,
+  75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+    transform: perspective(140px) rotateX(0deg);
+    opacity: 1;
+  }
+  90%,
+  100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+    transform: perspective(140px) rotateY(180deg);
+    opacity: 0;
+  }
+}
+
+/* body */
+body {
+  background-color: var(--dm-bg-dark);
+  color: var(--dm-text-color);
+}
+
+.navbar {
+  background-color: var(--dm-bg-dark) !important;
+}
+.navbar {
+  background-color: var(--dm-bg-dark) !important;
+}
+
+.navbar a {
+  color: var(--dm-text-color) !important;
+}
+
+.card {
+  background-color: var(--dm-bg-dark);
+}
+.Service-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.rounded-5 {
+  border-radius: 10px;
+}
+
+.btn-purple {
+  background-color: rgb(94, 17, 236);
+}
+
+.btn-pink,
+.bg-pink {
+  background-color: rgb(248, 58, 90);
+}
+
+.text-pink {
+  color: rgb(248, 58, 90);
+}
+
+.testimonial-icon {
+  margin-top: -50px;
+}
+.form-map {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar-control {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+.footer-fixed {
+  bottom: 30px;
+  right: 30px;
+  position: fixed;
+}
+
+.footer-icon {
+  width: 50px;
+  height: 50px;
+}
+.footer-fixed.show {
+  display: block !important;
+}
+
+/* menu icon */
+
+.menu-icon {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu-icon span {
+  width: 30px;
+  height: 4px;
+  background-color: var(--dm-color);
+  position: absolute;
+  border-radius: 25px;
+  transition: 0.5s;
+}
+.menu-icon span:nth-child(1) {
+  width: 30px;
+  transform: translateY(-15px);
+  left: 15px;
+}
+.menu-icon span:nth-child(2) {
+  width: 30px;
+  transform: translateY(15px);
+  right: 15px;
+}
+
+.menu-icon.move span:nth-child(3) {
+  width: 20px;
+  transform: translateY(0px) rotate(90deg);
+  animation: upDown 1.2s 0.3s infinite;
+}
+.menu-icon.move span:nth-child(1) {
+  width: 15px;
+  transform: translateY(0px) rotate(90deg);
+  left: 13px;
+  animation: upDown 1.2s infinite;
+}
+.menu-icon.move span:nth-child(2) {
+  width: 15px;
+  transform: translateY(0px) rotate(90deg);
+  right: 13px;
+  animation: upDown 1.2s 0.6s infinite;
+}
+
+@keyframes upDown {
+  0% {
+    transform: translateY(0px) rotate(90deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(90deg);
+  }
+  100% {
+    transform: translateY(0) rotate(90deg);
+  }
+}
+
+.o-n:focus {
+  box-shadow: none;
+}
+
+/* Slick */
+.slick-prev:before {
+  font-family: "Font Awesome 6 Pro";
+  content: "\2039";
+  font-size: 3rem;
+  color: var(--dm-color);
+}
+.slick-next:before {
+  font-family: "Font Awesome 6 Pro";
+  content: "\203a";
+  font-size: 3rem;
+  color: var(--dm-color);
+}
+
+.slick-dots {
+  bottom: -50px;
+}
+
+.slick-dots li {
+  width: 10px;
+  height: 10px;
+  background-color: var(--pdf-red-200);
+  border: 2px solid #dc2626;
+  border-radius: 50%;
+}
+
+.slick-dots li button::before {
+  display: none;
+}
+
+.slick-dots li.slick-active {
+  background-color: var(--pdf-red-600);
+}
+
+@media screen and (max-width: 768px) {
+  .footer-fixed {
+    bottom: 90px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .testimonial-icon {
+    margin-top: -35px;
+  }
+  .slick-prev {
+    left: -15px !important;
+    z-index: 1;
+  }
+  .slick-next {
+    right: -10px !important;
+    z-index: 1;
+  }
+  .footer-fixed {
+    bottom: 100px;
+  }
+}
