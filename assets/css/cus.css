@@ -75,33 +75,33 @@ html[data-theme="dark"] {
   transform: scale(1.1) rotateZ(270deg);
 }
 .sk-folding-cube .sk-cube2:before {
-  -webkit-animation-delay: 0.3s;
+  /* -webkit-animation-delay: 0.3s; */
   animation-delay: 0.3s;
 }
 .sk-folding-cube .sk-cube3:before {
-  -webkit-animation-delay: 0.6s;
+  /* -webkit-animation-delay: 0.6s; */
   animation-delay: 0.6s;
 }
 .sk-folding-cube .sk-cube4:before {
-  -webkit-animation-delay: 0.9s;
+  /* -webkit-animation-delay: 0.9s; */
   animation-delay: 0.9s;
 }
 @-webkit-keyframes sk-foldCubeAngle {
   0%,
   10% {
-    -webkit-transform: perspective(140px) rotateX(-180deg);
+    /* -webkit-transform: perspective(140px) rotateX(-180deg); */
     transform: perspective(140px) rotateX(-180deg);
     opacity: 0;
   }
   25%,
   75% {
-    -webkit-transform: perspective(140px) rotateX(0deg);
+    /* -webkit-transform: perspective(140px) rotateX(0deg); */
     transform: perspective(140px) rotateX(0deg);
     opacity: 1;
   }
   90%,
   100% {
-    -webkit-transform: perspective(140px) rotateY(180deg);
+    /* -webkit-transform: perspective(140px) rotateY(180deg); */
     transform: perspective(140px) rotateY(180deg);
     opacity: 0;
   }
@@ -110,19 +110,19 @@ html[data-theme="dark"] {
 @keyframes sk-foldCubeAngle {
   0%,
   10% {
-    -webkit-transform: perspective(140px) rotateX(-180deg);
+    /* -webkit-transform: perspective(140px) rotateX(-180deg); */
     transform: perspective(140px) rotateX(-180deg);
     opacity: 0;
   }
   25%,
   75% {
-    -webkit-transform: perspective(140px) rotateX(0deg);
+    /* -webkit-transform: perspective(140px) rotateX(0deg); */
     transform: perspective(140px) rotateX(0deg);
     opacity: 1;
   }
   90%,
   100% {
-    -webkit-transform: perspective(140px) rotateY(180deg);
+    /* -webkit-transform: perspective(140px) rotateY(180deg); */
     transform: perspective(140px) rotateY(180deg);
     opacity: 0;
   }
@@ -300,6 +300,62 @@ body {
   .footer-fixed {
     bottom: 90px;
   }
+  .menu-icon {
+    width: 70px;
+    height: 70px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .menu-icon span {
+    width: 30px;
+    height: 4px;
+    background-color: var(--dm-color);
+    position: absolute;
+    border-radius: 25px;
+    transition: 0.5s;
+  }
+  .menu-icon span:nth-child(1) {
+    width: 30px;
+    transform: translateY(-15px);
+    left: 15px;
+  }
+  .menu-icon span:nth-child(2) {
+    width: 30px;
+    transform: translateY(15px);
+    right: 15px;
+  }
+
+  .menu-icon.move span:nth-child(3) {
+    width: 20px;
+    transform: translateY(0px) rotate(90deg);
+    animation: upDown 1.2s 0.3s infinite;
+  }
+  .menu-icon.move span:nth-child(1) {
+    width: 15px;
+    transform: translateY(0px) rotate(90deg);
+    left: 13px;
+    animation: upDown 1.2s infinite;
+  }
+  .menu-icon.move span:nth-child(2) {
+    width: 15px;
+    transform: translateY(0px) rotate(90deg);
+    right: 13px;
+    animation: upDown 1.2s 0.6s infinite !important;
+  }
+
+  @keyframes upDown {
+    0% {
+      transform: translateY(0px) rotate(90deg);
+    }
+    50% {
+      transform: translateY(10px) rotate(90deg);
+    }
+    100% {
+      transform: translateY(0) rotate(90deg);
+    }
+  }
 }
 @media screen and (max-width: 576px) {
   .testimonial-icon {
@@ -315,5 +371,61 @@ body {
   }
   .footer-fixed {
     bottom: 100px;
+  }
+  .menu-icon {
+    width: 70px;
+    height: 70px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .menu-icon span {
+    width: 30px;
+    height: 4px;
+    background-color: var(--dm-color);
+    position: absolute;
+    border-radius: 25px;
+    transition: 0.5s;
+  }
+  .menu-icon span:nth-child(1) {
+    width: 30px;
+    transform: translateY(-15px);
+    left: 15px;
+  }
+  .menu-icon span:nth-child(2) {
+    width: 30px;
+    transform: translateY(15px);
+    right: 15px;
+  }
+
+  .menu-icon.move span:nth-child(3) {
+    width: 20px;
+    transform: translateY(0px) rotate(90deg);
+    animation: upDown 1.2s 0.3s infinite;
+  }
+  .menu-icon.move span:nth-child(1) {
+    width: 15px;
+    transform: translateY(0px) rotate(90deg);
+    left: 13px;
+    animation: upDown 1.2s infinite;
+  }
+  .menu-icon.move span:nth-child(2) {
+    width: 15px;
+    transform: translateY(0px) rotate(90deg);
+    right: 13px;
+    animation: upDown 1.2s 0.6s infinite !important;
+  }
+
+  @keyframes upDown {
+    0% {
+      transform: translateY(0px) rotate(90deg);
+    }
+    50% {
+      transform: translateY(10px) rotate(90deg);
+    }
+    100% {
+      transform: translateY(0) rotate(90deg);
+    }
   }
 }
