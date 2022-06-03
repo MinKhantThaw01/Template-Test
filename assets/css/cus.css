@@ -44,7 +44,7 @@ html[data-theme="dark"] {
   width: 50%;
   height: 50%;
   position: relative;
-  /* -webkit-transform: scale(1.1); */
+  -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
@@ -58,7 +58,7 @@ html[data-theme="dark"] {
   background-color: var(--dm-text-color);
   -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
   animation: sk-foldCubeAngle 2.4s infinite linear both;
-  /* -webkit-transform-origin: 100% 100%; */
+  -webkit-transform-origin: 100% 100%;
   -ms-transform-origin: 100% 100%;
   transform-origin: 100% 100%;
 }
@@ -89,7 +89,7 @@ html[data-theme="dark"] {
 @-webkit-keyframes sk-foldCubeAngle {
   0%,
   10% {
-    /* -webkit-transform: perspective(140px) rotateX(-180deg); */
+    -webkit-transform: perspective(140px) rotateX(-180deg);
     transform: perspective(140px) rotateX(-180deg);
     opacity: 0;
   }
@@ -237,17 +237,18 @@ body {
 }
 
 .menu-icon.move span:nth-child(3) {
+  transition: 0.2s;
   width: 20px;
   transform: translateY(0) rotate(90deg);
   -webkit-transform: translateY(0) rotate(90deg);
   -moz-transform: translateY(0) rotate(90deg);
   -o-transform: translateY(0) rotate(90deg);
   -ms-transform: translateY(0) rotate(90deg);
-  animation: upDown 1.2s 0.3s infinite;
-  -webkit-animation: upDown 1.2s 0.3s infinite;
-  -moz-animation: upDown 1.2s 0.3s infinite;
-  -o-animation: upDown 1.2s 0.3s infinite;
-  -ms-animation: upDown 1.2s 0.3s infinite;
+  animation: upDown 1s 0.2s infinite;
+  -webkit-animation: upDown 1s 0.2s infinite;
+  -moz-animation: upDown 1s 0.2s infinite;
+  -o-animation: upDown 1s 0.2s infinite;
+  -ms-animation: upDown 1s 0.2s infinite;
 }
 .menu-icon.move span:nth-child(1) {
   width: 15px;
@@ -256,12 +257,12 @@ body {
   -moz-transform: translateY(0) rotate(90deg);
   -o-transform: translateY(0) rotate(90deg);
   -ms-transform: translateY(0) rotate(90deg);
-  left: 13px;
-  animation: upDown 1.2s 0.3s infinite;
-  -webkit-animation: upDown 1.2s 0.3s infinite;
-  -moz-animation: upDown 1.2s 0.3s infinite;
-  -o-animation: upDown 1.2s 0.3s infinite;
-  -ms-animation: upDown 1.2s 0.3s infinite;
+  left: 15px;
+  animation: upDown 1s 0s infinite;
+  -webkit-animation: upDown 1s 0s infinite;
+  -moz-animation: upDown 1s 0s infinite;
+  -o-animation: upDown 1s 0s infinite;
+  -ms-animation: upDown 1s 0s infinite;
 }
 .menu-icon.move span:nth-child(2) {
   width: 15px;
@@ -270,12 +271,12 @@ body {
   -moz-transform: translateY(0) rotate(90deg);
   -o-transform: translateY(0) rotate(90deg);
   -ms-transform: translateY(0) rotate(90deg);
-  right: 13px;
-  animation: upDown 1.2s 0.3s infinite;
-  -webkit-animation: upDown 1.2s 0.3s infinite;
-  -moz-animation: upDown 1.2s 0.3s infinite;
-  -o-animation: upDown 1.2s 0.3s infinite;
-  -ms-animation: upDown 1.2s 0.3s infinite;
+  right: 15px;
+  animation: upDown 1s 0.3s infinite;
+  -webkit-animation: upDown 1s 0.3s infinite;
+  -moz-animation: upDown 1s 0.3s infinite;
+  -o-animation: upDown 1s 0.3s infinite;
+  -ms-animation: upDown 1s 0.3s infinite;
 }
 
 @keyframes upDown {
@@ -340,9 +341,34 @@ body {
   background-color: var(--pdf-red-600);
 }
 
+.active-link {
+  border-bottom: 3px solid;
+  transition: 0.2s linear;
+  border-color: var(--dm-color);
+}
+@media screen and (max-width: 991px) {
+  .active-link {
+    border-left: 2px solid;
+    transition: 0.2s linear;
+    border-color: var(--dm-color);
+    border-bottom: none;
+  }
+  .nav-link {
+    padding-left: 10px !important;
+  }
+}
 @media screen and (max-width: 768px) {
   .footer-fixed {
     bottom: 90px;
+  }
+  .active-link {
+    border-left: 2px solid;
+    transition: 0.2s linear;
+    border-color: var(--dm-color);
+    border-bottom: none;
+  }
+  .nav-link {
+    padding-left: 10px !important;
   }
 }
 @media screen and (max-width: 576px) {
@@ -359,5 +385,15 @@ body {
   }
   .footer-fixed {
     bottom: 100px;
+  }
+  .active-link {
+    border-left: 2px solid;
+    transition: 0.2s linear;
+    border-color: var(--dm-color);
+    border-bottom: none;
+    padding-right: 5px;
+  }
+  .nav-link {
+    padding-left: 10px !important;
   }
 }

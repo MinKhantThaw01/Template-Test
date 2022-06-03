@@ -9,6 +9,7 @@ var waypoint = new Waypoint({
       document.querySelector(".navbar").classList.remove("navbar-control");
       document.querySelector(".navbar").classList.remove("animate__fadeInDown");
       document.querySelector(".navbar").classList.remove("shadow-zinc-500");
+      document.querySelector(".original").classList.add("active-link");
     }
   },
   offset: "20%",
@@ -79,3 +80,13 @@ if (theme == "dark") {
 } else {
   themeToLight();
 }
+
+const toggle = document.getElementById("toggle");
+const navbar = document.getElementById("navbar");
+
+document.addEventListener("click", (e) => {
+  if (e.target.id !== "toggle" && e.target.id !== "navbar") {
+    navbar.classList.remove("move");
+    document.querySelector(".del").classList.remove("show");
+  }
+});
