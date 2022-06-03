@@ -280,11 +280,11 @@ body {
 
 @keyframes upDown {
   0% {
-    -webkit-transform: translateY(0) rotate(90deg);
-    -moz-transform: translateY(0) rotate(90deg);
-    -o-transform: translateY(0) rotate(90deg);
-    -ms-transform: translateY(0) rotate(90deg);
-    transform: translateY(0) rotate(90deg);
+    -webkit-transform: translateY(0px) rotate(90deg);
+    -moz-transform: translateY(0px) rotate(90deg);
+    -o-transform: translateY(0px) rotate(90deg);
+    -ms-transform: translateY(0px) rotate(90deg);
+    transform: translateY(0px) rotate(90deg);
   }
   50% {
     -webkit-transform: translateY(10) rotate(90deg);
@@ -294,11 +294,11 @@ body {
     transform: translateY(10px) rotate(90deg);
   }
   100% {
-    transform: translateY(0) rotate(90deg);
-    -webkit-transform: translateY(0) rotate(90deg);
-    -moz-transform: translateY(0) rotate(90deg);
-    -o-transform: translateY(0) rotate(90deg);
-    -ms-transform: translateY(0) rotate(90deg);
+    transform: translateY(0px) rotate(90deg);
+    -webkit-transform: translateY(0px) rotate(90deg);
+    -moz-transform: translateY(0px) rotate(90deg);
+    -o-transform: translateY(0px) rotate(90deg);
+    -ms-transform: translateY(0px) rotate(90deg);
   }
 }
 
